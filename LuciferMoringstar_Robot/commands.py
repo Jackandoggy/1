@@ -68,7 +68,6 @@ async def about(bot, message):
 
 @LuciferMoringstar_Robot.on_message(Worker.private & Worker.command(["autofilter"]))
 async def about(bot, message):
-
     await message.reply_photo(
         photo = choice(BOT_PICS),
         caption=LuciferMoringstar.ABOUT_MSG.format(mention=message.from_user.mention)
