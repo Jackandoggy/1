@@ -14,11 +14,11 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
         typed = query.message.reply_to_message.from_user.id
     except:
         typed = query.from_user.id
-
+        pass
     if (clicked == typed):
 
 
-# # ---------- 🔘 [ | 𝗚𝗥𝗢𝗨𝗣 𝗙𝗜𝗟𝗧𝗘𝗥𝗦 | ] 🔘 ---------- # #
+# ---------- 🔘 [ | 𝗚𝗥𝗢𝗨𝗣 𝗙𝗜𝗟𝗧𝗘𝗥𝗦 | ] 🔘 ---------- #
 
         if query.data.startswith("nextgroup"):
             ident, index, keyword = query.data.split("_")
@@ -39,7 +39,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                      InlineKeyboardButton("Close 🗑️", callback_data="close")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(text="⚠️ Check Bot pm  ⚠️", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
+                    [InlineKeyboardButton(text="⚠️ CHECK BOT PM ⚠️", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -57,7 +57,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                      InlineKeyboardButton("Close 🗑️", callback_data="close")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(text="⚠️ Check Bot pm  ⚠️", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
+                    [InlineKeyboardButton(text="⚠️ CHECK BOT PM ⚠️", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -84,7 +84,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                      InlineKeyboardButton("Close 🗑️", callback_data="close")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(text="⚠️ Check PM pm ⚠️", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
+                    [InlineKeyboardButton(text="⚠️ CHECK BOT PM ⚠️", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
                 )
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
@@ -101,7 +101,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                      InlineKeyboardButton("Close 🗑️", callback_data="close")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(text="⚠️ Check PM pm ⚠️", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
+                    [InlineKeyboardButton(text="⚠️ CHECK BOT PM ⚠️", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -109,7 +109,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                 )
                 return
 
-# # ---------- 🔘 [ | 𝗕𝗢𝗧 𝗣𝗠 𝗙𝗜𝗟𝗧𝗘𝗥𝗦 | ] 🔘 ---------- # #
+# ---------- 🔘 [ | 𝗕𝗢𝗧 𝗣𝗠 𝗙𝗜𝗟𝗧𝗘𝗥𝗦 | ] 🔘 ---------- #
 
 
         elif query.data.startswith("nextbot"):
@@ -221,7 +221,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                         file_id=file_id,
                         caption=f_caption
                         )
-                    await query.answer('🤖 Check PM, I have Sent Files In Pm 🤖',show_alert = True)
+                    await query.answer('⚠️ Hey {query.from_user.first_name}! I have files in your PM please Check Bot pm⚠️ ',show_alert = True)
             except UserIsBlocked:
                 await query.answer('Unblock the bot mahn !',show_alert = True)
             except PeerIdInvalid:
@@ -239,7 +239,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
             filedetails = await get_file_details(file_id)
             for files in filedetails:
                 title = files.file_name
-                size=get_size(files.file_size)
+                size=files.file_size
                 f_caption=files.caption
                 if CUSTOM_FILE_CAPTION:
                     try:
@@ -250,7 +250,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                 if f_caption is None:
                     f_caption = LuciferMoringstar.FILE_CAPTIONS
                 buttons = [[
-                  InlineKeyboardButton('🧑‍💻 How To Own 🧑‍💻', url='https://t.me/Mo_Tech_Group')
+                  InlineKeyboardButton('🖥️ Channel 🖥️', url=f'https://t.me/check_this_channel')
                   ]]                 
                 
                 await query.answer()
@@ -258,7 +258,6 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                     chat_id=query.from_user.id,
                     file_id=file_id,
                     caption=f_caption,
-                    message.delete(60)
                     reply_markup=InlineKeyboardMarkup(buttons)
                     )
 
@@ -269,17 +268,17 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
         elif query.data == "start":
             if query.from_user.id not in ADMINS: 
                 buttons = [[
-                 InlineKeyboardButton("➕️ Add me to Your Chat ➕️", url=f"http://t.me/{bot_info.BOT_USERNAME}?startgroup=true")
+                 InlineKeyboardButton("➕️ Add me to ➕️", url=f"http://t.me/{bot_info.BOT_USERNAME}?startgroup=true")
                  ],[
                  InlineKeyboardButton("ℹ️ Help", callback_data="help"),
-                 InlineKeyboardButton("😎 About", callback_data="about") 
+                 InlineKeyboardButton("😎 About", callback_data="about")
                  ]]
             else:
                 buttons = [[
-                 InlineKeyboardButton("➕️ Add me to Your Chat ➕️", url=f"http://t.me/{bot_info.BOT_USERNAME}?startgroup=true")
+                 InlineKeyboardButton("➕️ Add me to ➕️", url=f"http://t.me/{bot_info.BOT_USERNAME}?startgroup=true")
                  ],[
                  InlineKeyboardButton("ℹ️ Help", callback_data="bot_owner"),
-                 InlineKeyboardButton("😎 About", callback_data="about") 
+                 InlineKeyboardButton("😎 About", callback_data="about")
                  ]]               
             await query.message.edit(text=START_MSG.format(mention=query.from_user.mention, bot_name=bot_info.BOT_NAME, bot_username=bot_info.BOT_USERNAME), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
@@ -308,7 +307,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
             await query.answer()
 
     else:
-        await query.answer("Please Request",show_alert=True)
+        await query.answer("⚠️ Hey, {query.from_user.first_name}! Search Your Own File, Don't Click Others Results 😬",show_alert=True)
 
 
 
