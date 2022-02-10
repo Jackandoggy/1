@@ -39,7 +39,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                      InlineKeyboardButton("Close 🗑️", callback_data="close")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(text="🤖 CHECK MY PM 🤖", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
+                    [InlineKeyboardButton(text="⚠️ Check Bot pm  ⚠️", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -57,7 +57,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                      InlineKeyboardButton("Close 🗑️", callback_data="close")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(text="🤖 CHECK MY PM 🤖", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
+                    [InlineKeyboardButton(text="⚠️ Check Bot pm  ⚠️", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -84,7 +84,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                      InlineKeyboardButton("Close 🗑️", callback_data="close")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(text="🤖 CHECK MY PM 🤖", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
+                    [InlineKeyboardButton(text="⚠️ Check PM pm ⚠️", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
                 )
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
@@ -101,7 +101,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                      InlineKeyboardButton("Close 🗑️", callback_data="close")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(text="🤖 CHECK MY PM 🤖", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
+                    [InlineKeyboardButton(text="⚠️ Check PM pm ⚠️", url=f"https://telegram.dog/{bot_info.BOT_USERNAME}")]
                 )
 
                 await query.edit_message_reply_markup( 
