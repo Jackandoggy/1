@@ -70,4 +70,4 @@ async def about(bot, message):
 async def about(bot, message):
     await message.reply_photo(
         photo = choice(BOT_PICS),
-        caption=LuciferMoringstar.ABOUT_MSG.format(mention=message.from_user.mention)
+        caption=LuciferMoringstar.ABOUT_MSG.format(mention=message.from_user.mention),
