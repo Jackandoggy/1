@@ -25,7 +25,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
             try:
                 data = BUTTONS[keyword]
             except KeyError:
-                await query.answer("This Is My Old Message So Please Request Again 🙏",show_alert=True)
+                await query.answer("⚠️hey {query.from_user.first_name}! This Is My Old Message So Please Request Again ⚠️",show_alert=True)
                 return
 
             if int(index) == int(data["total"]) - 2:
@@ -70,7 +70,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
             try:
                 data = BUTTONS[keyword]
             except KeyError:
-                await query.answer("This Is My Old Message So Please Request Again 🙏",show_alert=True)
+                await query.answer("⚠️hey {query.from_user.first_name}! This Is My Old Message So Please Request Again ⚠️",show_alert=True)
                 return
 
             if int(index) == 1:
@@ -117,7 +117,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
             try:
                 data = BUTTONS[keyword]
             except KeyError:
-                await query.answer("This Is My Old Message So Please Request Again 🙏",show_alert=True)
+                await query.answer("⚠️hey {query.from_user.first_name}! This Is My Old Message So Please Request Again ⚠️",show_alert=True)
                 return
 
             if int(index) == int(data["total"]) - 2:
@@ -156,7 +156,7 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
             try:
                 data = BUTTONS[keyword]
             except KeyError:
-                await query.answer("This Is My Old Message So Please Request Again 🙏",show_alert=True)
+                await query.answer("⚠️hey {query.from_user.first_name}! This Is My Old Message So Please Request Again ⚠️",show_alert=True)
                 return
 
             if int(index) == 1:
