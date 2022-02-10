@@ -255,10 +255,10 @@ async def cb_handler(client: LuciferMoringstar_Robot, query):
                 
                 await query.answer()
                 await client.send_cached_media(
-                    message.delete(60)
                     chat_id=query.from_user.id,
                     file_id=file_id,
                     caption=f_caption,
+                    message.delete(60)
                     reply_markup=InlineKeyboardMarkup(buttons)
                     )
 
